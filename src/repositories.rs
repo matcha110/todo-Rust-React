@@ -114,3 +114,10 @@ impl TodoRepository for TodoRepositoryForMemory {
         Ok(())
     }
 }
+
+// #[cfg(test)]
+// impl CreateTodo {
+//     pub fn new(text: String) -> self {
+//         self { text }
+//     }
+// }
