@@ -31,6 +31,13 @@ pub struct CreateTodo {
     text: String,
 }
 
+#[cfg(test)]
+impl CreateTodo {
+    pub fn new(text: String) -> Self {
+        Self { text }
+    }
+}
+
 // Option<T>型は 取得できないかもしれない値 を表現する列挙型であり、値が無いことを示すNoneとあることを示すSome(T)のどちらかをとる
 // cf, Result<T,E>は失敗するかもしれない処理の結果を表現する列挙型である。適切な使い分けが必要
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq)]
